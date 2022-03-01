@@ -12,10 +12,9 @@ The code is available at S3 folder
 
 # Step-4: Convert Terraform plan as JSON with following commands
 1. terraform plan -out plantf
-![Uploading image.png…]()
-
 
 2. terraform show -json plantf > plan.json
 
 # Step-5: Run OPA
-
+Running Single OPA Script: ./opa eval --data S3/s3_acl.rego --inout plan.json "data.terraform"
+Running Multiple OPA Script: ./opa eval --data . --input plan.json "data.terraform"
