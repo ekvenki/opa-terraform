@@ -8,7 +8,7 @@ resource "aws_kms_key" "mykey" {
    tags = {
     Name        = "My KMS Key"
     Environment = "Sandbox"
-    Owner       = "VENKATRAMAN E K"
+    Owner       = "VENKAT"
   }
 }
 
@@ -18,7 +18,7 @@ resource "aws_s3_bucket" "b" {
   tags = {
     Name        = "My S3 test bucket 22 May 2020"
     Environment = "POC"
-    Owner       = "VENKATRAMAN E K",
+    Owner       = "VENKAT",
     DataType    = "Test files"
   }
 }
@@ -30,7 +30,7 @@ resource "aws_s3_bucket_acl" "b" {
 
 resource "aws_s3_bucket_logging" "b" {
   bucket = aws_s3_bucket.b.id
-  target_bucket = "raman-tf-01-Mar-2022"
+  target_bucket = "venkat-tf-01-Mar-2022"
   target_prefix = "s3logs/us-east-1/"
 }
 
