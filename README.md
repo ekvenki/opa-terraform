@@ -16,5 +16,5 @@ The code is available at S3 folder
 2. terraform show -json plantf > plan.json
 
 # Step-5: Run OPA
-Running Single OPA Script: ./opa eval --data S3/s3_acl.rego --inout plan.json "data.terraform"
-Running Multiple OPA Script: ./opa eval --data . --input plan.json "data.terraform"
+1. Running Single OPA Script: ./opa eval --data S3/s3_acl.rego --inout plan.json "data.terraform"
+2. Running Multiple OPA Script: ./opa eval --data . --input plan.json "data.terraform"
